@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Contactez-nous</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <div id="menu-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="topnav">
+                <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                <a class="nav-item active" href="#">Contact</a>
+            </nav>
+            <div class="hamburger" onclick="ToggleHamburger()" role="button">
+                <img src="img/hamburger.svg" alt="toggle menu" />
+                <div id="hamburger-overlay" class="">
+                    <nav id="hamburger-nav">
+                        <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                        <a class="nav-item active" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section-info">
+            <div id="container-info">
+                <article>
+                    <h2>Nous joindre</h2>
+                    <p class="text-contact">
+                        255 rue Notre-Dame
+                        <br>Saint-Germain-de-Grantham, QC
+                        <br>J0C 1K0
+                    </p>
+                    <p class="text-contact">819 816-6591</p>
+                </article>
+                <aside>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11117.85131218168!2d-72.5679472!3d45.8420357!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc813df7d23f417%3A0x9083f057b97354f7!2sRendez-Vous%20Canin!5e0!3m2!1sen!2sca!4v1730134718952!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </aside>
+            </div>
+        </section>
+        <section id="section-email">
+            <h2 class="text-center">Contactez nous</h2>
+            <form id="contactForm" method="post" onsubmit="SendContact()">
+                <p>Courriel</p>
+                <input name="email" type="email" required />
+                <p>Nom</p>
+                <input name="nom" type="text" required />
+                <p>Message</p>
+                <textarea name="message" required>
+                    
+                </textarea>
+                <br>
+                <button class="submitbtn" name="envoyer" type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="footnav">
+                <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                <a class="nav-item active" href="#">Contact</a>
+            </nav>
+        </div>
+        <p id="copyright">&copy; Rendez-vous Canin 2024 | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
