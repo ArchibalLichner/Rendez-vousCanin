@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Rendez-vous canin - Salon de Toilettage</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <div id="menu-container">
+            <a class="logo" href="#">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="topnav">
+                <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
+            <div class="hamburger" onclick="ToggleHamburger()" role="button">
+                <img src="img/hamburger.svg" alt="toggle menu" />
+                <div id="hamburger-overlay" class="">
+                    <nav id="hamburger-nav">
+                        <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                        <a class="nav-item" href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="parallax"></div>
+        <section id="intro-section">
+            <div class="container">
+                <h1 id="slogan">Des soins dans le respect avec <br>beaucoup d'amour.</h1>
+                <a class="button-rdv" href="rendez-vous.html">Prendre rendez-vous</a>
+            </div>
+        </section>
+        
+        <section id="about-section">
+            <article class="article-left">
+                <h2 class="title-center">A propos</h2>
+                <p></p>
+                <p>
+                    Coupe de griffes sur demande :<br>
+                    Petit chiens : 10$<br>
+                    Moyen chiens : 15$<br>
+                    Gros chiens : 20$
+                </p>
+            </article>
+            <aside class="image-right">
+                <img src="img/boutique.jpg" alt="coin du salon de toilettage" />
+            </aside>
+        </section>
+        
+        <section id="temoignages-section">
+            <div class="container">
+                <h2 class="title-center">Témoignages</h2>
+                <div id="carousel">
+                    <div class="carousel-element text-center">
+                        <p>Excellent service et personnel super sympathique</p>
+                        <div class="star-container">
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                        </div>
+                        <p>-Zack-Alexandre Roux</p>
+                    </div>
+                    <div class="carousel-element text-center">
+                        <p>Coupe de griffes parfaite</p>
+                        <div class="star-container">
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                        </div>
+                        <p>-Lydia Joly</p>
+                    </div>
+                    <div class="carousel-element text-center">
+                        <p>
+                            Super service<br>
+                            Rapide et à prix très raisonnable.<br>
+                            Bravo<br>
+                            Je recommande fortement
+                        </p>
+                        <div class="star-container">
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                        </div>
+                        <p>-Marc-Alexandre Morin</p>
+                    </div>
+                    <div class="carousel-element text-center">
+                        <p>Service 5 étoiles pour la première tonte de mon gros bébé Mia.👏</p>
+                        <div class="star-container">
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                            <div class="star active"></div>
+                        </div>
+                        <p>-Gilles Menard</p>
+                    </div>
+                </div>
+                <div id="prevslide" role="button">
+                    <p>&lt;</p>
+                </div>
+                <div id="nextslide" role="button">
+                    <p>&gt;</p>
+                </div>
+                <div id="slideselect">
+                    <div class="slider-dot active" role="button"></div>
+                    <div class="slider-dot" role="button"></div>
+                    <div class="slider-dot" role="button"></div>
+                    <div class="slider-dot" role="button"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <a class="logo" href="#">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="footnav">
+                <a class="nav-item" href="rendez-vous.html">Rendez-vous</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <p id="copyright">&copy; Rendez-vous Canin 2024 | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
