@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Prendre rendez-vous</title>
+</head>
+
+<body onload="init()">
+    <header>
+        <div id="menu-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="topnav">
+                <a class="nav-item active" href="#">Rendez-vous</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
+            <div class="hamburger" onclick="ToggleHamburger()" role="button">
+                <img src="img/hamburger.svg" alt="toggle menu" />
+                <div id="hamburger-overlay" class="">
+                    <nav id="hamburger-nav">
+                        <a class="nav-item active" href="#">Rendez-vous</a>
+                        <a class="nav-item" href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section-rdv">
+            <h2 class="text-center">Envoyez-nous les détails suivants et nous vous enverrons nos disponibilités</h2>
+            <form method="post" onsubmit="SendRDV()" id="rdvForm">
+                <p>Courriel *</p>
+                <input name="email" type="email" required />
+                <p>Nom du chien *</p>
+                <input name="nom-chien" type="text" required />
+                <p>Age du chien *</p>
+                <input class="rdv-num" name="age" type="number" min="0" max="31" step="1" value="0" required /><label for="age">ans</label>
+                <p>Sexe du chien *</p>
+                <label class="container-label" for="sexe-chien-m">
+                    <input type="radio" id="sexe-chien-m" name="sexe-chien" value="M" required />
+                    <span class="checkmark"></span>M
+                </label><br>
+                <label class="container-label" for="sexe-chien-f">
+                    <input type="radio" id="sexe-chien-f" name="sexe-chien" value="F" />
+                    <span class="checkmark"></span>F
+                </label>
+                <p>Nom du propriétaire *</p>
+                <input name="nom-proprio" type="text" required />
+                <p>Numéro de téléphone *</p>
+                <input name="telephone" type="tel" required />
+                <p>Shampooing particulier requis</p>
+                <input name="shampooing-requis" value="Non" type="text" />
+                <p>Parfum *</p>
+                <label class="container-label" for="parfum-y">
+                    <input type="radio" id="parfum-y" name="parfum" value="oui" required />
+                    <span class="checkmark"></span>Oui
+                </label><br>
+                <label class="container-label" for="parfum-n">
+                    <input type="radio" id="parfum-n" name="parfum" value="non" />
+                    <span class="checkmark"></span>Non
+                </label>
+                <p>Service *</p>
+                <label class="container-label" for="service-griffes">
+                    <input type="radio" id="service-griffes" name="service" value="griffes" required />
+                    <span class="checkmark"></span>Coupe de griffes
+                </label><br>
+                <label class="container-label" for="service-complet">
+                    <input type="radio" id="service-complet" name="service" value="complet" />
+                    <span class="checkmark"></span>Toilettage complet
+                </label>
+                <p>Commentaires</p>
+                <textarea name="commentaires">
+                    
+                </textarea>
+                <br>
+                <button class="submitbtn" name="envoyer" type="submit">Envoyer</button>
+                <p class="req-disclaimer">Les champs avec un * sont obligatoires</p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Le rendez-vous canin" />
+            </a>
+            <nav id="footnav">
+                <a class="nav-item active" href="#">Rendez-vous</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <p id="copyright">&copy; Rendez-vous Canin 2024 | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
