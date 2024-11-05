@@ -360,6 +360,10 @@ main {
     line-height: 20pt;
 }
 
+.article-left {
+    max-width: 40%;
+}
+
 .container-label {
     display: block;
     position: relative;
